@@ -2,8 +2,7 @@
 This repository cotnains various uses cases which can be used inside a github actions workflow
 
 # This repository has 3 repository main, dev and dev2
-This repository has various projects with the name project1, project2 and so on
-each project has its own github actions yaml file which coverese different usecases
+This repository has various projects with the name project1, project2 and so on. Each project has its own github actions yaml file which covers different usecases.
 
 # Below explain what each project is doing:
 # Project1
