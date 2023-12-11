@@ -5,7 +5,7 @@ This repository cotnains various uses cases which can be used inside a github ac
 This repository has various projects with the name project1, project2 and so on
 each project has its own github actions yaml file which coverese different usecases
 
-# Below explain what eahc project is doing:
+# Below explain what each project is doing:
 # Project1
 shows how to make steps depedndent on eahc other and how we can use if condition between 2 steps inside a same job.
 # Project2
