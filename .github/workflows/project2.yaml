@@ -1,0 +1,36 @@
+name: Trigger workflow for current branch for project2
+
+on:
+  push:
+    branches:
+      - dev
+      - dev2
+
+jobs:
+  trigger-branches:
+    runs-on: ubuntu-latest
+
+    steps:
+########################### below steps are for branch dev ###########################
+
+      - name: steps for branch dev for project2
+        id: dev_branch
+        if: github.event.ref == 'refs/heads/dev'
+        run: |
+          echo "Workflow is running for dev branch"
+      
+      - name: checkout my code from dev for project2
+        uses: actions/checkout@v3
+        if: steps.dev_branch.outcome == 'success'
+
+########################### below steps are for branch dev2 ###########################
+
+      - name: steps for branch dev2 for project2
+        id: dev2_branch
+        if: github.event.ref == 'refs/heads/dev2'
+        run: |
+          echo "Workflow is running inside dev2 branch"
+      
+      - name: checkout my code from dev2 for project2
+        uses: actions/checkout@v3
+        if: steps.dev2_branch.outcome == 'success'

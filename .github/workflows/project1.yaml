@@ -1,0 +1,20 @@
+name: Trigger workflow for project1 
+
+on: 
+  push: 
+    branches: 
+      - dev 
+ 
+jobs: 
+  trigger-branches: 
+    runs-on: ubuntu-latest 
+
+    steps: 
+      - name: steps for dev for project1
+        id: dev_branch 
+        run: | 
+          echo "Workflow is running" 
+
+      - name: checkout my code from dev for project1 
+        uses: actions/checkout@v3 
+        if: steps.dev_branch.outcome == 'success' 
